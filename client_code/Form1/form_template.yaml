@@ -1,5 +1,61 @@
 components:
-- layout_properties: {slot: default}
+- components:
+  - layout_properties: {grid_position: 'QSKGOI,OWBZGK'}
+    name: TeamOne
+    properties: {bold: true, text: Team 1}
+    type: Label
+  - data_bindings: []
+    layout_properties: {grid_position: 'VBSXQQ,WDPQJG'}
+    name: TeamOneScore
+    properties: {}
+    type: Label
+  - layout_properties: {grid_position: 'WMKUMH,IXZFDF'}
+    name: AddOne
+    properties:
+      align: left
+      role: primary-color
+      spacing:
+        margin: [null, null, null, 41]
+        padding: [null, 16, null, 16]
+      text: '+1'
+    type: Button
+  - layout_properties: {grid_position: 'CGUSER,AETFUX'}
+    name: SubtractOne
+    properties:
+      align: left
+      role: primary-color
+      spacing:
+        margin: [null, null, null, 41]
+      text: '-1'
+    type: Button
+  - layout_properties: {grid_position: 'DWGICR,FRSHMI'}
+    name: TeamTwo
+    properties: {bold: true, text: Team 2}
+    type: Label
+  - layout_properties: {grid_position: 'MKTHAU,BTGWYT'}
+    name: TeamTwoScore
+    properties: {}
+    type: Label
+  - layout_properties: {grid_position: 'FKKQNH,KPITUQ'}
+    name: AddOne_copy
+    properties:
+      align: left
+      role: primary-color
+      spacing:
+        margin: [null, null, null, 41]
+        padding: [null, 16, null, 16]
+      text: '+1'
+    type: Button
+  - layout_properties: {grid_position: 'ACRWEQ,QSHAJB'}
+    name: SubtractOne_copy
+    properties:
+      align: left
+      role: primary-color
+      spacing:
+        margin: [null, null, null, 41]
+      text: '-1'
+    type: Button
+  layout_properties: {slot: default}
   name: content_panel
   properties: {}
   type: ColumnPanel
@@ -7,7 +63,11 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: ScoreCounter
+  properties: {role: headline, text: Score Pilot}
+  type: Label
 container:
-  properties: {html: '@theme:standard-page.html'}
+  properties: {html: '@theme:standard-page.html', tooltip: The best score counter!}
   type: HtmlTemplate
 is_package: true
